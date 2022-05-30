@@ -191,6 +191,27 @@ a.first__screen-btn-read {
 .content .info .show {
   display: flex;
 }
+.popup{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.63);
+    top: 0;
+    left: 0;
+    z-index: 30;
+    opacity: 0;
+    visibility: hidden;
+}
+.popup.open{
+    opacity: 1;
+    visibility: visible;
+}
+.popup__body{
+    min-height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
  @media only screen and (max-width: 1920px) and (min-width: 1400px){
     .swiper-button-prev{
         left: 87% !important;
@@ -306,7 +327,7 @@ p.subtitle {
     line-height: 147%;
 /* or 29px */
     color: #3D3D3D;
-    padding-top: 30px;
+    padding-top: 20px;
 }
 
 .our__team-wrapper {
@@ -499,3 +520,77 @@ section.third__screen {
 }
 
 :root {--swiper-navigation-size: 0px;}
+
+.popup__content {
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+    background: #fff;
+    max-width: 714px;
+    width: 100%;
+    padding: 20px;
+    position: relative;
+}
+.popup__close{
+    position: absolute;
+    right: -17px;
+    top: -17px;
+    background: #F8F8F8;
+    border: 1px solid #DEDEDE;
+    padding: 10px 12px;
+    border-radius: 50px;
+}
+
+.popup__content-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.content__flex-grid {
+    padding-left: 20px;
+    /* position: relative; */
+    min-width: 300px;
+}
+
+.content__flex-block2 {
+    display: flex;
+    min-height: 27px;
+    position: relative;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.content__flex-block2 p {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 17px;
+/* identical to box height */
+    text-align: center;
+    color: #585858;
+}
+
+.content__flex-block2 span {
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 17px;
+/* identical to box height */
+    text-align: left;
+    position: absolute;
+    color: #2C2C2C;
+    /* right: 0; */
+    left: 39%;
+    background: #F4F4F4;
+    border-radius: 7px;
+    padding: 6px 7px;
+}
+
+.content__flex-social {
+    background: #F4F4F4;
+    border-radius: 7px;
+    max-width: fit-content;
+    padding: 7px 9px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-width: 170px;
+    margin-top: 20px;
+}

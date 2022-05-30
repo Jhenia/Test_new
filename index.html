@@ -3,12 +3,9 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Test</title>
-	
-   <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
+	<title>Test</title>	
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="css/style.css">
-     
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
@@ -154,14 +151,15 @@
                                 <div class="swiper-slide-hover-wrap">
                                     <h5>Tom Dou</h5>
                                     <p>Front-End</p>
-                                    <a href="">Read More</a>
+                                    <a  class="open__popup">Read More</a>
                                 </div>     
                             </div>
+
                         </div>
                         
 
                     </div>
-                </div>
+                </div>  
                 <div class="swiper-slide">
                     <div class="swiper-slide-flex">
                         
@@ -171,7 +169,7 @@
                                 <div class="swiper-slide-hover-wrap">
                                     <h5>Tom Dou</h5>
                                     <p>Front-End</p>
-                                    <a href="">Read More</a>
+                                    <a  class="open__popup2">Read More</a>
                                 </div>     
                             </div>
                         </div>
@@ -187,7 +185,7 @@
                                 <div class="swiper-slide-hover-wrap">
                                     <h5>Tom Dou</h5>
                                     <p>Front-End</p>
-                                    <a href="">Read More</a>
+                                    <a  class="open__popup3">Read More</a>
                                 </div>     
                             </div>
                             <img src="images/unsplash4.png" alt="unsplash4">
@@ -203,7 +201,7 @@
                                 <div class="swiper-slide-hover-wrap">
                                     <h5>Tom Dou</h5>
                                     <p>Front-End</p>
-                                    <a href="">Read More</a>
+                                    <a class="open__popup4">Read More</a>
                                 </div>     
                             </div>
                             <img src="images/unsplash2.png" alt="unsplash4">
@@ -219,7 +217,7 @@
                                 <div class="swiper-slide-hover-wrap">
                                     <h5>Tom Dou</h5>
                                     <p>Front-End</p>
-                                    <a href="">Read More</a>
+                                    <a  class="open__popup5">Read More</a>
                                 </div>     
                             </div>
                             <img src="images/unsplash3.png" alt="unsplash4">
@@ -235,7 +233,7 @@
                                 <div class="swiper-slide-hover-wrap">
                                     <h5>Tom Dou</h5>
                                     <p>Front-End</p>
-                                    <a href="">Read More</a>
+                                    <a  class="open__popup6">Read More</a>
                                 </div>     
                             </div>
                             <img src="images/unsplash4.png" alt="unsplash4">
@@ -251,14 +249,15 @@
                                 <div class="swiper-slide-hover-wrap">
                                     <h5>Tom Dou</h5>
                                     <p>Front-End</p>
-                                    <a href="">Read More</a>
+                                    <a class="open__popup7">Read More</a>
                                 </div>     
                             </div>
                             <img src="images/unsplash3.png" alt="unsplash4">
                         </div>
                         
                        
-                    </div></div>
+                    </div>
+                </div>
                 
               </div>
               <div class="swiper-button-next"></div>
@@ -266,8 +265,44 @@
               <div class="swiper-pagination"></div>
             </div>
        </div>
- 
+ <div class="popup"> 
+                                    <div class="popup__body">
+                                        <div class="popup__content">
+                                            <div class="popup__content-wrapper content__flex">
+                                                <img src="images/main_modal.png" alt="main_modal">
+                                                <div class="content__flex-grid">
+                                                   <div class="content__flex-block2">
+                                                    <p>Name:</p><span>Tom Dou</span>
+                                                </div>
+                                                <div class="content__flex-block2">
+                                                    <p>Position:</p><span>Front-End</span>
+                                                </div> 
+                                                 <div class="content__flex-block2">
+                                                    <p>Phone:</p><span>+3125789075</span>
+                                                </div>
+                                                <div class="content__flex-block2">
+                                                    <p>Email:</p><span>username@mail.com</span>
+                                                </div>
+                                                    <div class="content__flex-social">
+                                                        <a href=""><img src="images/facebook.png" alt="facebook"></a>
+                                                        <a href=""><img src="images/instagram.png" alt="instagram"></a>
+                                                        <a href=""><img src="images/Linkedin.png" alt="Linkedin"></a>
+                                                        <a href=""><img src="images/twitter.png" alt="twitter"></a>
+                                                        
+                                                    </div>
+                                                </div>
+                                                <p class="content__flex-description subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce nullam ac sed eget. Dui in eget a tristique. Curabitur massa nec non egestas nisl. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dui in eget a tristique. Curabitur massa nec non egestas nisl. Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+                                            </div>
+                                            <a  class="popup__close"><img src="images/close.png" alt="close"></a>
+                                          
+                                        </div>
+                                    </div>
+                            </div>
     </section>
+    <script
+              src="https://code.jquery.com/jquery-3.5.1.js"
+              integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+              crossorigin="anonymous"></script>
         <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
 	<script>window.addEventListener('DOMContentLoaded', function() {
 
@@ -314,6 +349,7 @@
         },
         
         spaceBetween: 30,
+        allowTouchMove: true,
         
         navigation: {
           nextEl: ".swiper-button-next",
@@ -340,6 +376,34 @@
     }
   }
       });
+      
+   
+    document.querySelector('.open__popup').addEventListener('click', _=> {
+  document.querySelector('.popup').classList.toggle('open');
+})
+    document.querySelector('.open__popup2').addEventListener('click', _=> {
+  document.querySelector('.popup').classList.toggle('open');
+})
+     document.querySelector('.open__popup3').addEventListener('click', _=> {
+  document.querySelector('.popup').classList.toggle('open');
+})
+      document.querySelector('.open__popup4').addEventListener('click', _=> {
+  document.querySelector('.popup').classList.toggle('open');
+})
+       document.querySelector('.open__popup5').addEventListener('click', _=> {
+  document.querySelector('.popup').classList.toggle('open');
+})
+        document.querySelector('.open__popup6').addEventListener('click', _=> {
+  document.querySelector('.popup').classList.toggle('open');
+})
+         document.querySelector('.open__popup7').addEventListener('click', _=> {
+  document.querySelector('.popup').classList.toggle('open');
+})
+    document.querySelector('.popup__close').addEventListener('click', _=> {
+  document.querySelector('.popup').classList.remove('open');
+  })
+
     </script>
+
 </body>
 </html>
