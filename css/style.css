@@ -192,6 +192,9 @@ a.first__screen-btn-read {
   display: flex;
 }
  @media only screen and (max-width: 1920px) and (min-width: 1400px){
+    .swiper-button-prev{
+        left: 87% !important;
+    }
     .swiper-slide-flex>div{
         /* max-width: 400px !important; */
         /* max-height: 290px !IMPORTANT; */
@@ -308,10 +311,12 @@ p.subtitle {
 
 .our__team-wrapper {
     display: flex;
+    margin-top: 70px;
 }
 
 .our__team-wrapper-subtitle {
     max-width: 430px;
+    margin-right: 20px;
 }
 
 .our__team-wrapper-subtitle h6 {
@@ -331,12 +336,14 @@ p.subtitle {
 body {font-family: 'Ubuntu', sans-serif;}
 
 .swiper-slide-flex {
-    display: flex;
+    /* display: flex; */
+    /* margin-right: 20px; */
+    /* min-width: 0 !important; */
 }
 
 .swiper-slide-flex>div {
-    margin-right: 20px;
-    max-width: 443px;
+    /* margin-right: 20px; */
+    max-width: 430px;
     position: relative;
     cursor: pointer;
     z-index: 20;
@@ -354,13 +361,13 @@ span.swiper-pagination-progressbar-fill {
 }
 
 .swiper-button-next {
-    right: 20px;
+    right: 50px;
     bottom: -190px;
     top: 424px;
 }
 
 .swiper-button-next:after {
-    content: '';
+    content: '' !important;
     background-image: url('../images/arrow_r.png') !IMPORTANT;
     background-repeat: no-repeat !IMPORTANT;
     background: #F8F8F8;
@@ -385,7 +392,7 @@ span.swiper-pagination-progressbar-fill {
 .swiper-button-prev {
     bottom: 0%;
     top: 424px;
-    left: 88%;
+    left: 91%;
     /* transform: translateX(870px); */
 }
 
@@ -404,7 +411,7 @@ section.third__screen {
     padding-bottom: 144px;
 }
 
-.swiper-slide {width: 100% !important;}
+.swiper-slide {/* width: 53% !important; */padding:;}
 
 .swiper-slide-active {
     /* width: 100% !important; */
@@ -427,9 +434,9 @@ section.third__screen {
     top: -50%;
     z-index: 1;
     left: 50%;
-    transform: translate(-50%, 50%);
+    transform: translate(-50%, 49%);
     background: #00000094;
-    border-radius: 5px;
+    border-radius: 10px;
     width: 100%;
     height: 100%;
 }
@@ -479,3 +486,16 @@ section.third__screen {
     margin: 0 auto !IMPORTANT;
     max-width: 267px;
 }
+
+.our__team-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.our__team-container img {
+    margin-right: 230px;
+    margin-top: 30px;
+}
+
+:root {--swiper-navigation-size: 0px;}
