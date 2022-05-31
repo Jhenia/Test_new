@@ -88,10 +88,10 @@
                         <div class="description">
                             <div class="description__first">
                                 <img src="images/unsplash.png" alt="unsplash">
-                                <h5>Tom Dou<br><span>Front-End</span></h5>
+                                <h5>Tim Cook<br><span>Back-End</span></h5>
 
                             </div>
-                            <p class="subtitle">“Lorem ipsum dolor sit amet, consectetur adipiscing elit. At pretium id viverra interdum nam odio ultricies. Diam leo, sed neque dui pulvinar condimentum pretium. At pretium id viverra interdum nam odio ultricies. Diam leo, sed neque dui pulvinar condimentum pretium.”</p>
+                            <p class="subtitle">“Lorem ipsum dolor sit amet, consectetur adipiscing elit. At pretium id viverra interdum nam odio ultricies. Diam leo, sed neque dui pulvinar condimentum pretium. Diam leo, sed neque dui pulvinar condimentum pretium.”</p>
                         </div>
                     </div>
                     <div class="tabcontent">
@@ -149,18 +149,50 @@
                 </div>
             </div>
     </section>
-    <section class="third__screen our__team container">
-        <div class="our__team-container">
+    <section class="third__screen our__team ">
+        <div class="our__team-container container">
             <h2 class="title">Our Team</h2>
             <img src="images/x-img.png" alt="x-img">
         </div>
+        
+        
         <div class="our__team-wrapper">
             <div class="our__team-wrapper-subtitle">
                 <h6>About</h6>
                 <p class="subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce nullam ac sed eget. Dui in eget a tristique. Curabitur massa nec non egestas nisl. Fusce nullam ac sed eget. Dui in eget a tristique. </p>
                 <img src="images/x-img.png" alt="x-img">
             </div>
-            <div class="swiper mySwiper swiper-container">
+                <div class="">
+                    <div class="container flex" id="flex">
+            <div class="custom-radio active">
+    <label>
+        <input type="radio" name="radio">
+        <div class="custom-radio__label">
+            <p>Team 1</p>
+        </div>
+    </label>
+</div>
+
+<div class="clear"></div>
+
+<div class="custom-radio">
+    <label>
+        <input type="radio" name="radio">
+        <div class="custom-radio__label">
+            <p>Team 2</p>
+        </div>
+    </label>
+</div>
+<div class="custom-radio">
+    <label>
+        <input type="radio" name="radio">
+        <div class="custom-radio__label">
+            <p>Team 3</p>
+        </div>
+    </label>
+</div>
+        </div><div class="swiper mySwiper swiper-container">
+
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
                         <div class="swiper-slide-flex">
@@ -184,8 +216,8 @@
                                 <img src="images/unsplash2.png" alt="unsplash2">
                                 <div class="swiper-slide-hover">
                                     <div class="swiper-slide-hover-wrap">
-                                        <h5>Tom Dou</h5>
-                                        <p>Front-End</p>
+                                        <h5>Tim Cook</h5>
+                                        <p>Back-End</p>
                                         <a class="open__popup2">Read More</a>
                                     </div>
                                 </div>
@@ -269,6 +301,8 @@
                 <div class="swiper-button-prev"></div>
                 <div class="swiper-pagination"></div>
             </div>
+                </div>
+            
         </div>
         <div class="popup">
             <div class="popup__body">
@@ -426,7 +460,7 @@
           type: "progressbar",
         },
         
-        
+        loop: true,
         allowTouchMove: true,
         
         navigation: {
@@ -437,24 +471,44 @@
     // when window width is >= 320px
 
     320: {
-      slidesPerView: 1,
-      spaceBetween: 20
+        centeredSlides: true,
+        slidesPerColumn: 2,
+      slidesPerView: 1.2,
+      spaceBetween: 20,
+      
     },
     400: {
-      slidesPerView: 1.5,
+        centeredSlides: true,
+      slidesPerView: 1.4,
       spaceBetween: 20
     },
     // when window width is >= 480px
-    565: {
+    465: {
+        centeredSlides: true,
       slidesPerView: 2,
+       spaceBetween: 30
+    },
+    600: {
+        centeredSlides: true,
+      slidesPerView: 2.4,
+       spaceBetween: 30
+    },
+     900: {
+        centeredSlides: true,
+      slidesPerView: 2.8,
        spaceBetween: 30
     },
     // when window width is >= 640px
     1200: {
-      slidesPerView: 2,
+        centeredSlides: true,
+      slidesPerView: 2.2,
        spaceBetween: 20
     },1600: {
       slidesPerView: 3,
+      spaceBetween: 20
+    },
+    1700: {
+      slidesPerView: 3.2,
       spaceBetween: 20
     }
   }
@@ -488,17 +542,27 @@
 let header__burger = document.querySelector('.header__burger');
 let header_menu = document.querySelector('.header__menu');
 let back = document.querySelector('body');
-let header__list = document.querySelector('.header__list');
+
 
 header__burger.onclick = function(){
     header__burger.classList.toggle('active');
     header_menu.classList.toggle('active');
     back.classList.toggle('lock');
-}
+};
 
-header__list.onclick = function () {
-    header__list.classList.remove('active');
-    back.classList.toggle('lock');
+
+var btnContainer = document.getElementById("flex");
+
+// Get all buttons with class="btn" inside the container
+var btns = btnContainer.getElementsByClassName("custom-radio");
+
+// Loop through the buttons and add the active class to the current/clicked button
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function() {
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
 }
     </script>
 
