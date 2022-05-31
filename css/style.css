@@ -137,7 +137,7 @@ a.first__screen-btn-read {
   /* width: 100%; */
   padding: 40px 0px;
   display: flex;
-  flex-direction: row;
+  flex-direction: row-reverse;
   justify-content: space-between;
 }
 .content .header {
@@ -812,7 +812,14 @@ img.half__circle-icon {
     margin: 0 auto;
     max-width: fit-content;
 }
+  .hide_m{
+    display: none !important;
+}
 @media only screen and (max-width: 767px) {
+  
+.hide_s{
+    display: none;
+}
     .header__burger{
         width: 30px;
         height: 24px;
@@ -954,7 +961,7 @@ a.first__screen-btn-read {
 }
 
 .info {
-    flex-direction: column !important;
+    flex-direction: column-reverse !important;
     padding: 0 !important;
 }
 
